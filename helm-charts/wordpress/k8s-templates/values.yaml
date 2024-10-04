@@ -1,0 +1,17 @@
+wordpressUsername: adminHelen
+wordpressPassword: 123pashelen
+wordpressEmail: helenchuiko@gmail.com
+ 
+ # We're using an external RDS instance instead
+mariadb:
+  enabled: false
+
+externalDatabase:
+  host: terraform-20241004171643344400000001.cjuznvz1t4am.us-east-1.rds.amazonaws.com
+  user: adminHelen
+  password: 123pashelen
+  database: wordpress
+
+# Expose WordPress publicly using a LoadBalancer
+service:
+  type: LoadBalancer 
